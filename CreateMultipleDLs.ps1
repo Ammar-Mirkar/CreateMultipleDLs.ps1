@@ -1,0 +1,2 @@
+Add-PSSnapin *exch*
+Import-Csv C:\Users\fx2605505\Desktop\Ammar_TMR\Label_Policy_DLs_full.csv | ForEach { New-DistributionGroup -Name $_.Name -Alias $_.Alias -SamAccountName $_.SamAccountName -CopyOwnerToMember -ManagedBy "Mirkar, Ammar"-MemberDepartRestriction Closed -MemberJoinRestriction Closed -OrganizationalUnit "hrbinc.hrblock.net/Address Book/Distribution Lists" -Type "Distribution"}
